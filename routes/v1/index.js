@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const ticketRoutes = require('./ticket.routes');
 const Payment = require("../v1/payment.routes");
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+
 
 const swaggerUI = require("swagger-ui-express");
 const yaml = require("yaml");
